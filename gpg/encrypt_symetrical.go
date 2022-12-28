@@ -11,6 +11,7 @@ import (
 
 func EncryptSymetrical(c *cli.Context) error {
 	password := ""
+	passwordConfirm := ""
 	prompt := &survey.Password{
 		Message: "Enter password:",
 	}
@@ -24,6 +25,15 @@ func EncryptSymetrical(c *cli.Context) error {
 	newFileName := sourceFilePath[:strings.LastIndex(sourceFilePath, ".")] + ".gpg"
 
 	survey.AskOne(prompt, &password, survey.WithValidator(survey.Required))
+
+	prompt = &survey.Password{
+		Message: "Confirm password:",
+	}
+	survey.AskOne(prompt, &passwordConfirm, survey.WithValidator(survey.Required))
+
+	if password != passwordConfirm {
+		return cli.Exit("Passwords do not match!", 1)
+	}
 
 	// Check if the file already exists
 	if _, err := os.Stat(newFileName); !os.IsNotExist(err) {
