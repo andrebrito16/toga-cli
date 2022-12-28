@@ -3,6 +3,7 @@ package main
 import (
 	"os"
 
+	"github.com/andrebrito16/toga-cli/gpg"
 	"github.com/andrebrito16/toga-cli/terminal"
 	log "github.com/sirupsen/logrus"
 	"github.com/urfave/cli/v2"
@@ -21,6 +22,7 @@ func main() {
 		Usage: "Just a simple CLI for setup dev environment. Don't lose your time, just takeoff!",
 		Commands: []*cli.Command{
 			terminal.Command(),
+			gpg.Command(),
 		},
 	}
 
