@@ -1,7 +1,8 @@
 package main
 
 import (
-	"os"
+    "github.com/andrebrito16/toga-cli/git"
+    "os"
 
 	"github.com/andrebrito16/toga-cli/gpg"
 	"github.com/andrebrito16/toga-cli/terminal"
@@ -23,6 +24,7 @@ func main() {
 		Commands: []*cli.Command{
 			terminal.Command(),
 			gpg.Command(),
+            git.Command(),
 		},
 	}
 
