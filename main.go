@@ -3,6 +3,7 @@ package main
 import (
 	"os"
 
+	"github.com/andrebrito16/toga-cli/git"
 	"github.com/andrebrito16/toga-cli/gpg"
 	"github.com/andrebrito16/toga-cli/terminal"
 	log "github.com/sirupsen/logrus"
@@ -23,6 +24,7 @@ func main() {
 		Commands: []*cli.Command{
 			terminal.Command(),
 			gpg.Command(),
+			git.Command(),
 		},
 	}
 
