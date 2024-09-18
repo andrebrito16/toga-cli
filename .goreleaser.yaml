@@ -1,0 +1,13 @@
+builds:
+  - id: toga
+    binary: toga
+    main: ./cmd/toga-cli
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w
