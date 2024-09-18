@@ -6,7 +6,7 @@ Just a simple CLI that contains useless things to development.
 ## Install from source
 With go 1.16 or higher:
 ```
-go install github.com/andrebrito16/toga-cli@latest
+go install github.com/andrebrito16/toga-cli/cmd/toga@latest
 ```
 
 ## Manual installation
