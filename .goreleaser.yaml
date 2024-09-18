@@ -1,7 +1,7 @@
 builds:
   - id: toga
     binary: toga
-    main: ./main.go
+    main: ./cmd/toga/main.go
     goos:
       - linux
       - darwin

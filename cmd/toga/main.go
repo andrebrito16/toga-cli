@@ -1,8 +1,9 @@
 package main
 
 import (
-    "github.com/andrebrito16/toga-cli/git"
-    "os"
+	"os"
+
+	"github.com/andrebrito16/toga-cli/git"
 
 	"github.com/andrebrito16/toga-cli/gpg"
 	"github.com/andrebrito16/toga-cli/terminal"
@@ -24,9 +25,9 @@ func main() {
 		Commands: []*cli.Command{
 			terminal.Command(),
 			gpg.Command(),
-            git.Command(),
+			git.Command(),
 		},
-        Version: "v1.0.4.1-beta",
+		Version: "v1.0.4.1-beta",
 	}
 
 	err := app.Run(os.Args)
